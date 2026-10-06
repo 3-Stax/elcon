@@ -29,6 +29,38 @@
         }
     </script>
 
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Elcon Gravestones House",
+  "image": "https://elcongravestones.com/assets/carousel/c1.jpg",
+  "@id": "https://elcongravestones.com/#localbusiness",
+  "url": "https://elcongravestones.com",
+  "telephone": "+264 61 272 081",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Number 2194, Ranonkel Street",
+    "addressLocality": "Windhoek",
+    "addressCountry": "NA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -22.540939,
+    "longitude": 17.049528
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+    ],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "priceRange": "$$"
+}
+</script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,22 +104,31 @@
                 </a>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-cream hover:text-gold p-2">
-                <i data-lucide="menu" class="w-6 h-6"></i>
+            <!-- Mobile Menu Button with Lucide Icon Wrapper -->
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden text-cream hover:text-gold p-2.5 rounded-xl bg-charcoal/50 border border-gold/20 transition-colors">
+                <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
             </button>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-charcoal border-b border-white/10 px-6 py-4 space-y-3">
-            <a href="#home" class="block text-cream hover:text-gold py-1">Home</a>
-            <a href="#about" class="block text-cream hover:text-gold py-1">About Heritage</a>
-            <a href="#services" class="block text-cream hover:text-gold py-1">Services</a>
-            <a href="#gallery" class="block text-cream hover:text-gold py-1">Memorial Collection</a>
-            <a href="#contact" class="block text-cream hover:text-gold py-1">Contact & Quote</a>
-            <div class="pt-2 border-t border-white/10 flex flex-col space-y-2 text-xs text-gold">
-                <span class="flex items-center space-x-2"><i data-lucide="phone" class="w-3.5 h-3.5"></i> +264 81 210 3271</span>
-                <span class="flex items-center space-x-2"><i data-lucide="phone-call" class="w-3.5 h-3.5"></i> +264 61 272 081</span>
+        <!-- Mobile Menu Dropdown (Polished Glassmorphism & Smooth Animation States) -->
+        <div id="mobile-menu" class="max-h-0 overflow-hidden md:hidden bg-midnight/95 backdrop-blur-xl border-b border-gold/20 transition-all duration-300 ease-in-out shadow-2xl">
+            <div class="px-6 py-6 space-y-4">
+                <a href="#home" class="mobile-link block text-base font-medium text-cream hover:text-gold py-1.5 transition-colors">Home</a>
+                <a href="#about" class="mobile-link block text-base font-medium text-cream hover:text-gold py-1.5 transition-colors">About Heritage</a>
+                <a href="#services" class="mobile-link block text-base font-medium text-cream hover:text-gold py-1.5 transition-colors">Services</a>
+                <a href="#gallery" class="mobile-link block text-base font-medium text-cream hover:text-gold py-1.5 transition-colors">Memorial Collection</a>
+                <a href="#contact" class="mobile-link block text-base font-medium text-cream hover:text-gold py-1.5 transition-colors">Contact & Quote</a>
+                
+                <div class="pt-4 border-t border-white/10 space-y-3">
+                    <a href="tel:+264812103271" class="flex items-center space-x-3 text-xs text-gold bg-gold/10 border border-gold/30 px-4 py-3 rounded-xl">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        <span class="font-semibold">+264 81 210 3271</span>
+                    </a>
+                    <a href="tel:+26461272081" class="flex items-center space-x-3 text-xs text-gray-300 bg-charcoal/50 border border-white/10 px-4 py-3 rounded-xl">
+                        <i data-lucide="phone-call" class="w-4 h-4 text-gold"></i>
+                        <span>Landline: +264 61 272 081</span>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -557,6 +598,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs">
             <p>&copy; <span id="current-year"></span> Elcon Gravestones House. All rights reserved.</p>
             <p class="mt-2 sm:mt-0 text-gold">Windhoek, Namibia Memorial Monument Specialists</p>
+            <p class="mt-2 sm:mt-0 text-gold">This is a prototype</p>
+            <p class="mt-2 sm:mt-0 text-gold">SKYNINEdigital</p>
         </div>
     </footer>
 
